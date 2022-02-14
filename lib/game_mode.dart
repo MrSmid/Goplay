@@ -2,6 +2,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:goplay/who_plays.dart';
 
 class GameMode extends StatefulWidget {
   const GameMode({Key? key}) : super(key: key);
@@ -83,7 +84,8 @@ class _GameModeState extends State<GameMode> {
             margin: EdgeInsets.only(bottom: 75),
             child: ElevatedButton(
               onPressed: ()  {
-                print("продолжить");
+                if (selectedMode >= 0)
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => WhoPlays()));
               },
               child: Text(
                 AppLocalizations.of(context)!.continueButton,
@@ -105,7 +107,7 @@ class _GameModeState extends State<GameMode> {
           ),
           Container(
             alignment: Alignment.topRight,
-            margin: EdgeInsets.only(top: 86, right: 20),
+            margin: EdgeInsets.only(top: 81, right: 20),
             child: GestureDetector(
               child: SvgPicture.asset('assets/images/icons/clear.svg',),
               onTap: (){
@@ -127,12 +129,13 @@ class _GameModeState extends State<GameMode> {
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
               color: selectedMode == i ? const Color(0xFF7169E2) : Color(0xFF2D3142),
-            )
+            ),
           ),
-          margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+          margin: const EdgeInsets.only(left: 15, right: 15, bottom: 16),
           child: ListTile(
+            minVerticalPadding: 0,
             title: Container(
-              margin: const EdgeInsets.only(bottom: 6),
+              margin: const EdgeInsets.only(bottom: 6,),
               child: Text(
                 titles[i],
                 style: const TextStyle(

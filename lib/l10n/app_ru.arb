@@ -13,5 +13,9 @@
   "gameModeDescription1" : "Откровенные вопросы только для взрослых.",
   "gameModeDescription2" : "Стыдные вопросы и действия с сексуальным подтекстом.",
   "gameModeDescription3" : "Сексуально и незыбываемо. Только для двоих",
-  "continue" : "Продолжить"
+  "continueButton" : "Продолжить",
+
+  "whoPlays" : "Кто играет",
+  "addPlayer" : "Добавить игрока",
+  "randomOrder" : "Случайный порядок"
 }

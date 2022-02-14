@@ -36,3 +36,9 @@ flutter:
     - assets/images/game_mode/radio_selected.svg
     - assets/images/game_mode/radio_unselected.svg
     - assets/images/icons/clear.svg
+    - assets/images/icons/add.svg
+    - assets/images/icons/female.svg
+    - assets/images/icons/male.svg
+    - assets/images/icons/emoji_happy.svg
+    - assets/images/icons/refresh.svg
+    - assets/images/icons/arrow_left.svg

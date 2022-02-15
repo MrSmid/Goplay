@@ -249,7 +249,7 @@ class _WhoPlaysState extends State<WhoPlays> {
   void _refreshPlayers(){
     Random random = Random();
     setState(() {
-      for (int i = 0; i < players.length; i++)
+      for (int i = players.length - 1; i >= 1; i--)
       {
         int j = random.nextInt(i + 1);
         var tmp_player = players[j];

@@ -4,6 +4,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'assets/colors/colors.dart' as colors;
 
 enum PlayerGender{
   male,
@@ -47,7 +48,7 @@ class _WhoPlaysState extends State<WhoPlays> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: const Color(0xFF1C1F2A),
+      backgroundColor: const Color(colors.BG),
       body: Stack(
         children: [
           Container(
@@ -64,7 +65,7 @@ class _WhoPlaysState extends State<WhoPlays> {
                   child: Text(
                     AppLocalizations.of(context)!.whoPlays,
                     style: TextStyle(
-                      color: Color(0x99FFFFFF),
+                      color: Color(colors.white60),
                       fontSize: 22,
                       fontFamily: "Gilroy",
                       fontWeight: FontWeight.w600,
@@ -78,7 +79,7 @@ class _WhoPlaysState extends State<WhoPlays> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(68),
                       border: Border.all(
-                        color: Color(0xFF2D3142),
+                        color: Color(colors.gray),
                       ),
                     ),
                     child: ListTile(
@@ -117,7 +118,7 @@ class _WhoPlaysState extends State<WhoPlays> {
                       return Container(
                         margin: EdgeInsets.only(left: 15, right: 15, bottom: 16),
                         decoration: BoxDecoration(
-                          color: Color(0xFF2D3142),
+                          color: Color(colors.gray),
                           borderRadius: BorderRadius.circular(68),
                         ),
                         child: ListTile(
@@ -196,7 +197,7 @@ class _WhoPlaysState extends State<WhoPlays> {
                     icon: SvgPicture.asset('assets/images/icons/emoji_happy.svg'),
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.symmetric(horizontal: 55, vertical: 18),
-                      primary: Color(0xFF7169E2),
+                      primary: Color(colors.violet),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(44),
                       ),
@@ -214,7 +215,7 @@ class _WhoPlaysState extends State<WhoPlays> {
                         child: Text(
                           AppLocalizations.of(context)!.randomOrder,
                           style: TextStyle(
-                            color: Color(0x80FFFFFF),
+                            color: Color(colors.white50),
                             fontSize: 14,
                             fontFamily: "Gilroy",
                             fontWeight: FontWeight.w400,

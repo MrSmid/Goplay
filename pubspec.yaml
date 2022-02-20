@@ -29,16 +29,16 @@ flutter:
   uses-material-design: true
   generate: true
   assets:
-    - assets/images/splash_screen/goplay_icon.svg
-    - assets/images/splash_screen/goplay_title_image.svg
-    - assets/images/game_selection/glasses.svg
-    - assets/images/game_selection/button_start_game.svg
-    - assets/images/game_mode/radio_selected.svg
-    - assets/images/game_mode/radio_unselected.svg
-    - assets/images/icons/clear.svg
-    - assets/images/icons/add.svg
-    - assets/images/icons/female.svg
-    - assets/images/icons/male.svg
-    - assets/images/icons/emoji_happy.svg
-    - assets/images/icons/refresh.svg
-    - assets/images/icons/arrow_left.svg
+    - lib/assets/images/splash_screen/goplay_icon.svg
+    - lib/assets/images/splash_screen/goplay_title_image.svg
+    - lib/assets/images/game_selection/glasses.svg
+    - lib/assets/images/game_selection/button_start_game.svg
+    - lib/assets/images/game_mode/radio_selected.svg
+    - lib/assets/images/game_mode/radio_unselected.svg
+    - lib/assets/images/icons/clear.svg
+    - lib/assets/images/icons/add.svg
+    - lib/assets/images/icons/female.svg
+    - lib/assets/images/icons/male.svg
+    - lib/assets/images/icons/emoji_happy.svg
+    - lib/assets/images/icons/refresh.svg
+    - lib/assets/images/icons/arrow_left.svg

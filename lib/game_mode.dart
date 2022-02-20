@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:goplay/who_plays.dart';
+import 'assets/colors/colors.dart' as colors;
 
 class GameMode extends StatefulWidget {
   const GameMode({Key? key}) : super(key: key);
@@ -32,7 +33,7 @@ class _GameModeState extends State<GameMode> {
       AppLocalizations.of(context)!.gameModeDescription3
     ];
     return Scaffold(
-      backgroundColor: const Color(0xFF1C1F2A),
+      backgroundColor: const Color(colors.BG),
       body: Stack(
         children: [
           Container(
@@ -42,7 +43,7 @@ class _GameModeState extends State<GameMode> {
                 shape: BoxShape.circle,
                 boxShadow: [
                   BoxShadow(
-                    color: Color(0x507169E2),
+                    color: Color(colors.violet30),
                     blurRadius: 500.0,
                     spreadRadius: 150,
                   ),
@@ -63,7 +64,7 @@ class _GameModeState extends State<GameMode> {
                   child: Text(
                     AppLocalizations.of(context)!.selectGameMode,
                     style: TextStyle(
-                      color: Color(0x99FFFFFF),
+                      color: Color(colors.white60),
                       fontSize: 22,
                       fontFamily: "Gilroy",
                       fontWeight: FontWeight.w600,
@@ -98,7 +99,7 @@ class _GameModeState extends State<GameMode> {
               ),
               style: ElevatedButton.styleFrom(
                 padding: EdgeInsets.symmetric(horizontal: 69, vertical: 21.5),
-                primary: Color(0xFF7169E2),
+                primary: Color(colors.violet),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(44),
                 ),
@@ -128,7 +129,7 @@ class _GameModeState extends State<GameMode> {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
-              color: selectedMode == i ? const Color(0xFF7169E2) : Color(0xFF2D3142),
+              color: selectedMode == i ? const Color(colors.violet) : Color(colors.gray),
             ),
           ),
           margin: const EdgeInsets.only(left: 15, right: 15, bottom: 16),
@@ -149,7 +150,7 @@ class _GameModeState extends State<GameMode> {
             subtitle: Text(
               subtitles[i],
               style: const TextStyle(
-                color: Color(0x80FFFFFF),
+                color: Color(colors.white50),
                 fontSize: 14,
                 fontFamily: "Gilroy",
                 fontWeight: FontWeight.w400,
@@ -180,7 +181,7 @@ class _GameModeState extends State<GameMode> {
                 ),
               ],
             ),
-            tileColor: const Color(0xFF2D3142),
+            tileColor: const Color(colors.gray),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(16),
             ),

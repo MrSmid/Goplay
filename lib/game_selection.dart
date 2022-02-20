@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:goplay/game_mode.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'assets/colors/colors.dart' as colors;
 
 class GameSelection extends StatefulWidget {
   const GameSelection({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class _GameSelectionState extends State<GameSelection> {
   Widget build(BuildContext context) {
     final PageController controller = PageController();
     return Scaffold(
-      backgroundColor: Color(0xFF1C1F2A),
+      backgroundColor: Color(colors.BG),
       body: Stack(
         children: [
           Container(
@@ -31,7 +32,7 @@ class _GameSelectionState extends State<GameSelection> {
                 shape: BoxShape.circle,
                 boxShadow: [
                   BoxShadow(
-                    color: Color(0x507169E2),
+                    color: Color(colors.violet30),
                     blurRadius: 500.0,
                     spreadRadius: 150,
                   ),
@@ -49,7 +50,7 @@ class _GameSelectionState extends State<GameSelection> {
             child: Text(
               AppLocalizations.of(context)!.selectGame,
               style: TextStyle(
-                color: Color(0x99FFFFFF),
+                color: Color(colors.white60),
                 fontSize: 22,
                 fontFamily: "Gilroy",
                 fontWeight: FontWeight.w600,
@@ -93,7 +94,7 @@ class _GameSelectionState extends State<GameSelection> {
                 paintStyle:  PaintingStyle.fill,
                 strokeWidth:  1,
                 dotColor:  Colors.white,
-                activeDotColor:  Color(0xFF7169E2),
+                activeDotColor:  Color(colors.violet),
               ),
             ),
             width: MediaQuery.of(context).size.width,
@@ -105,7 +106,7 @@ class _GameSelectionState extends State<GameSelection> {
             child: Text(
               currentPage.toString().padLeft(2, '0'),
               style: const TextStyle(
-                color: Color(0xFF7169E2),
+                color: Color(colors.violet),
                 fontSize: 24,
                 fontFamily: "Gilroy",
                 fontWeight: FontWeight.w600,
@@ -129,7 +130,7 @@ class _GameSelectionState extends State<GameSelection> {
                         Text(
                           AppLocalizations.of(context)!.startGame,
                           style: TextStyle(
-                            color: Color(0xFF1C1F2A),
+                            color: Color(colors.BG),
                             fontSize: 14,
                             fontFamily: "Gilroy",
                             fontWeight: FontWeight.w600,
@@ -140,7 +141,7 @@ class _GameSelectionState extends State<GameSelection> {
                           child: const Icon(
                             Icons.arrow_forward,
                             size: 16,
-                            color: Color(0xFF1C1F2A),
+                            color: Color(colors.BG),
                           ),
                         )
                       ],
@@ -183,7 +184,7 @@ class _GameSelectionState extends State<GameSelection> {
             child: Text(
               AppLocalizations.of(context)!.gameDescription0,
               style: TextStyle(
-                color: Color(0x80FFFFFF),
+                color: Color(colors.white50),
                 fontSize: 14,
                 fontFamily: "Gilroy",
                 fontWeight: FontWeight.w400,

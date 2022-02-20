@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:goplay/game_selection.dart';
+import 'assets/colors/colors.dart' as colors;
 
 class SplashScreen extends StatelessWidget {
 
@@ -11,7 +12,7 @@ class SplashScreen extends StatelessWidget {
     return AnimatedSplashScreen(
       splashIconSize: MediaQuery.of(context).size.height,
       centered: false,
-      backgroundColor: Color(0xFF7169E2),
+      backgroundColor: Color(colors.violet),
       duration: 0,
       nextScreen: GameSelection(),
       splash: Stack(
@@ -24,7 +25,7 @@ class SplashScreen extends StatelessWidget {
                 shape: BoxShape.circle,
                 boxShadow: [
                   BoxShadow(
-                    color: Color(0x7052F29C),
+                    color: Color(colors.green40),
                     blurRadius: 500.0,
                     spreadRadius: 150,
                   ),
@@ -43,7 +44,7 @@ class SplashScreen extends StatelessWidget {
                   shape: BoxShape.circle,
                   boxShadow: [
                     BoxShadow(
-                      color: Color(0x60EF52F2),
+                      color: Color(colors.pink40),
                       blurRadius: 500.0,
                       spreadRadius: 150,
                     ),

@@ -157,7 +157,7 @@ class _GameState extends State<Game> with SingleTickerProviderStateMixin {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   GestureDetector(
-                    child: SvgPicture.asset('assets/images/icons/arrow_left.svg'),
+                    child: SvgPicture.asset('lib/assets/images/icons/arrow_left.svg'),
                     onTap: () => Navigator.pop(context),
                   ),
                   Container(
@@ -180,7 +180,7 @@ class _GameState extends State<Game> with SingleTickerProviderStateMixin {
               alignment: Alignment.topRight,
               margin: EdgeInsets.only(top: 102, right: 18),
               child: SvgPicture.asset(
-                'assets/images/game_selection/glasses.svg',
+                'lib/assets/images/game_selection/glasses.svg',
                 width: MediaQuery.of(context).size.width * 0.55,
               ),
             ),

@@ -102,7 +102,7 @@ class _WhoPlaysState extends State<WhoPlays> {
                             textEditControllers.add(new TextEditingController(text: players[players.length - 1].name));
                           });
                         },
-                        child: SvgPicture.asset('assets/images/icons/add.svg'),
+                        child: SvgPicture.asset('lib/assets/images/icons/add.svg'),
                       ),
                     ),
                   ),
@@ -124,7 +124,7 @@ class _WhoPlaysState extends State<WhoPlays> {
                         ),
                         child: ListTile(
                           leading: GestureDetector(
-                            child: players[index].gender == PlayerGender.male ? SvgPicture.asset('assets/images/icons/male.svg') : SvgPicture.asset('assets/images/icons/female.svg'),
+                            child: players[index].gender == PlayerGender.male ? SvgPicture.asset('lib/assets/images/icons/male.svg') : SvgPicture.asset('lib/assets/images/icons/female.svg'),
                             onTap: (){
                               setState(() {
                                 if (players[index].gender == PlayerGender.male)
@@ -154,7 +154,7 @@ class _WhoPlaysState extends State<WhoPlays> {
                                 textEditControllers.removeAt(index);
                               });
                             },
-                            child: SvgPicture.asset('assets/images/icons/clear.svg'),
+                            child: SvgPicture.asset('lib/assets/images/icons/clear.svg'),
                           ),
                         ),
                       );
@@ -185,7 +185,7 @@ class _WhoPlaysState extends State<WhoPlays> {
                         fontWeight: FontWeight.w600,
                       ),
                     ),
-                    icon: SvgPicture.asset('assets/images/icons/emoji_happy.svg'),
+                    icon: SvgPicture.asset('lib/assets/images/icons/emoji_happy.svg'),
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.symmetric(horizontal: 55, vertical: 18),
                       primary: Color(colors.violet),
@@ -217,7 +217,7 @@ class _WhoPlaysState extends State<WhoPlays> {
                         onTap: (){
                           _refreshPlayers();
                         },
-                        child: SvgPicture.asset('assets/images/icons/refresh.svg'),
+                        child: SvgPicture.asset('lib/assets/images/icons/refresh.svg'),
                       )
                     ],
                   ),
@@ -229,7 +229,7 @@ class _WhoPlaysState extends State<WhoPlays> {
             alignment: Alignment.topLeft,
             margin: EdgeInsets.only(left: 15, top: 81),
             child: GestureDetector(
-              child: SvgPicture.asset('assets/images/icons/arrow_left.svg'),
+              child: SvgPicture.asset('lib/assets/images/icons/arrow_left.svg'),
               onTap: () => Navigator.pop(context),
             ),
           )

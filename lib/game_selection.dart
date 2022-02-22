@@ -120,7 +120,7 @@ class _GameSelectionState extends State<GameSelection> {
             child: Stack(
               alignment: Alignment.bottomRight,
               children: [
-                SvgPicture.asset('assets/images/game_selection/button_start_game.svg',),
+                SvgPicture.asset('lib/assets/images/game_selection/button_start_game.svg',),
                 Container(
                     alignment: Alignment.bottomRight,
                     margin: const EdgeInsets.only(bottom: 80, right: 31,),
@@ -163,7 +163,7 @@ class _GameSelectionState extends State<GameSelection> {
           Container(
             padding: EdgeInsets.only(top: 140, left: 15),
             alignment: Alignment.topLeft,
-            child: SvgPicture.asset('assets/images/game_selection/glasses.svg',),
+            child: SvgPicture.asset('lib/assets/images/game_selection/glasses.svg',),
           ),
           Container(
             padding: EdgeInsets.only(top: 7, left: 15),

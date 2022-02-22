@@ -64,11 +64,11 @@ class SplashScreen extends StatelessWidget {
               children: [
                 Container(
                   padding: EdgeInsets.only(right: 30),
-                  child: SvgPicture.asset('assets/images/splash_screen/goplay_icon.svg',),
+                  child: SvgPicture.asset('lib/assets/images/splash_screen/goplay_icon.svg',),
                 ),
                 Container(
                   padding: EdgeInsets.only(top: 21),
-                  child: SvgPicture.asset('assets/images/splash_screen/goplay_title_image.svg'),
+                  child: SvgPicture.asset('lib/assets/images/splash_screen/goplay_title_image.svg'),
                 ),
               ],
             ),

@@ -110,7 +110,7 @@ class _GameModeState extends State<GameMode> {
             alignment: Alignment.topRight,
             margin: EdgeInsets.only(top: 81, right: 20),
             child: GestureDetector(
-              child: SvgPicture.asset('assets/images/icons/clear.svg',),
+              child: SvgPicture.asset('lib/assets/images/icons/clear.svg',),
               onTap: (){
                 Navigator.pop(context);
               },
@@ -166,8 +166,8 @@ class _GameModeState extends State<GameMode> {
                 Container(
                   margin: EdgeInsets.only(left: 16),
                   child: selectedMode == i ?
-                  SvgPicture.asset('assets/images/game_mode/radio_selected.svg',) :
-                  SvgPicture.asset('assets/images/game_mode/radio_unselected.svg',)
+                  SvgPicture.asset('lib/assets/images/game_mode/radio_selected.svg',) :
+                  SvgPicture.asset('lib/assets/images/game_mode/radio_unselected.svg',)
                 ),
                 Radio(
                   value: i,

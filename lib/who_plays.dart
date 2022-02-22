@@ -84,6 +84,13 @@ class _WhoPlaysState extends State<WhoPlays> {
                       ),
                     ),
                     child: ListTile(
+                      onTap: (){
+                        setState(() {
+                          players.add(Player("new name", PlayerGender.male));
+                          textEditControllers.add(new TextEditingController(text: players[players.length - 1].name));
+                        });
+                      },
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(68)),
                       title: Center(
                         child: Text(
                           AppLocalizations.of(context)!.addPlayer,
@@ -95,15 +102,7 @@ class _WhoPlaysState extends State<WhoPlays> {
                           ),
                         ),
                       ),
-                      trailing: GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            players.add(Player("new name", PlayerGender.male));
-                            textEditControllers.add(new TextEditingController(text: players[players.length - 1].name));
-                          });
-                        },
-                        child: SvgPicture.asset('lib/assets/images/icons/add.svg'),
-                      ),
+                      trailing: SvgPicture.asset('lib/assets/images/icons/add.svg'),
                     ),
                   ),
                 ),
@@ -166,12 +165,11 @@ class _WhoPlaysState extends State<WhoPlays> {
           ),
           Container(
             alignment: Alignment.bottomCenter,
-            height: MediaQuery.of(context).size.height,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Container(
-                  margin: EdgeInsets.only(bottom: 29),
+                  margin: EdgeInsets.only(bottom: 27),
                   child:ElevatedButton.icon(
                     onPressed: ()  {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => Game()));
@@ -196,32 +194,39 @@ class _WhoPlaysState extends State<WhoPlays> {
                   ),
                 ),
                 Container(
-                  alignment: Alignment.bottomCenter,
-                  margin: EdgeInsets.only(bottom: 57),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        margin: EdgeInsets.only(right: 13),
-                        child: Text(
-                          AppLocalizations.of(context)!.randomOrder,
-                          style: TextStyle(
-                            color: Color(colors.white50),
-                            fontSize: 14,
-                            fontFamily: "Gilroy",
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
+                  margin: EdgeInsets.only(bottom: 48),
+                  child: Ink(
+                    child: InkWell(
+                      onTap: (){
+                        _refreshPlayers();
+                      },
+                      customBorder: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(1000.0)
                       ),
-                      GestureDetector(
-                        onTap: (){
-                          _refreshPlayers();
-                        },
-                        child: SvgPicture.asset('lib/assets/images/icons/refresh.svg'),
-                      )
-                    ],
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(left: 10),
+                            child: Text(
+                              AppLocalizations.of(context)!.randomOrder,
+                              style: TextStyle(
+                                color: Color(colors.white50),
+                                fontSize: 14,
+                                fontFamily: "Gilroy",
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(left: 13, top: 5, right: 10, bottom: 5),
+                            child: SvgPicture.asset('lib/assets/images/icons/refresh.svg',),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
-                )
+                ),
               ],
             ),
           ),

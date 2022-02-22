@@ -4,6 +4,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:goplay/game.dart';
 import 'assets/colors/colors.dart' as colors;
 
 enum PlayerGender{
@@ -149,18 +150,8 @@ class _WhoPlaysState extends State<WhoPlays> {
                           trailing: GestureDetector(
                             onTap: (){
                               setState(() {
-                                for(int i = 0; i < players.length; i++) {
-                                  print(i);
-                                  print(players[i].name);
-                                }
                                 players.removeAt(index);
                                 textEditControllers.removeAt(index);
-                                print("//");
-                                print("removed $index");
-                                for(int i = 0; i < players.length; i++) {
-                                  print(i);
-                                  print(players[i].name);
-                                }
                               });
                             },
                             child: SvgPicture.asset('assets/images/icons/clear.svg'),
@@ -183,7 +174,7 @@ class _WhoPlaysState extends State<WhoPlays> {
                   margin: EdgeInsets.only(bottom: 29),
                   child:ElevatedButton.icon(
                     onPressed: ()  {
-                      print("продолжить");
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => Game()));
                     },
                     label: Text(
                       AppLocalizations.of(context)!.startGame,

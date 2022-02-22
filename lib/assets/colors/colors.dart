@@ -4,5 +4,6 @@ const violet = 0xFF7169E2;
 const green40 = 0x7052F29C;
 const pink40 = 0x60EF52F2;
 const gray = 0xFF2D3142;
-const white50 = 0x99FFFFFF;
+const gray60 = 0x992D3142;
+const white50 = 0x82FFFFFF;
 const white60 = 0x99FFFFFF;

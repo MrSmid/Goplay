@@ -42,3 +42,4 @@ flutter:
     - lib/assets/images/icons/emoji_happy.svg
     - lib/assets/images/icons/refresh.svg
     - lib/assets/images/icons/arrow_left.svg
+    - lib/assets/images/icons/arrow_right.svg

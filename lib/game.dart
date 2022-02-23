@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'assets/colors/colors.dart' as colors;
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Game extends StatefulWidget {
   const Game({Key? key}) : super(key: key);
@@ -163,7 +164,7 @@ class _GameState extends State<Game> with SingleTickerProviderStateMixin {
                   Container(
                     margin: EdgeInsets.only(top: 24),
                     child: Text(
-                      "Правда или действие",
+                      AppLocalizations.of(context)!.gameName0,
                       style: TextStyle(
                         color: Color(colors.white60),
                         fontSize: 26,
@@ -234,7 +235,7 @@ class _GameState extends State<Game> with SingleTickerProviderStateMixin {
                           Container(
                             margin: EdgeInsets.only(left: 31, right: 33),
                             child: Text(
-                              "Готово",
+                              AppLocalizations.of(context)!.ready,
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 14,
